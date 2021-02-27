@@ -1,0 +1,7 @@
+{
+    "prefix": "vq!",
+    "subreddits": [
+        "https://www.reddit.com/r/dankmemes/hot/.json?limit=100",
+        "https://www.reddit.com/r/PrequelMemes/hot/.json?limit=100"
+    ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "vegahq-dbot",
+  "version": "1.0.0",
+  "description": "A tutorial bot for VegaHQ watchers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aikenahac/vegahq-dbot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Aiken Tine Ahac, Gašper Dobrovoljc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aikenahac/vegahq-dbot/issues"
+  },
+  "homepage": "https://github.com/aikenahac/vegahq-dbot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "https": "^1.0.0"
+  }
+}
