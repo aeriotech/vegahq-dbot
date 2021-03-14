@@ -1,8 +1,8 @@
-const https = require('https');
-const Discord = require('discord.js');
+const https = require('https')
+const Discord = require('discord.js')
 
 module.exports = {
-    memeGen: function (message, url) {
+    memeGen: (message, url) => {
 
         https.get(url, (result) => {
             var body = ''
@@ -52,5 +52,6 @@ module.exports = {
                 console.log('Got an error: ', e)
             })
         })
-    }
+    },
+
 }

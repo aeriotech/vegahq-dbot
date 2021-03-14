@@ -1,5 +1,6 @@
 const { Client } = require('discord.js'); 
-const commands = require('./commands.js');
+const { memeGen } = require('./commands.js');
+const { playMusic, stopMusic, getQueue } = require('./commands/music.js')
 const config = require('./config.json');
 require('dotenv').config();
 
@@ -16,24 +17,38 @@ client.on('ready', () => {
 });
 
 // Runs when user sends a message
-client.on('message', message => {
+client.on('message', async message => {
     const args = message.content.slice(prefix.length).trim().split(' ');
     const command = args.shift().toLowerCase();
     
     if (message.author.bot) return;
+    if (!message.content.startsWith(prefix)) return;
 
-    else if (message.content.toLowerCase() === 'ping') message.channel.send('pong!');
-    
-    else if (!message.content.startsWith(prefix)) return;
+    if (message.content.toLowerCase() === 'ping') await message.channel.send('pong!');
 
-    else if (command === 'meme') {
-        const subreddit = subreddits[Math.floor(Math.random() * subreddits.length)]
-        
-        console.log(`Source subreddit: ${subreddit}`);
+    switch (command) {
+        case 'meme':
+            const subreddit = subreddits[Math.floor(Math.random() * subreddits.length)]
+            console.log(`Source subreddit: ${subreddit}`)
+            memeGen(message, subreddit)
+            break
 
-        commands.memeGen(message, subreddit);
+        case 'play':
+            await playMusic(message, args[0])
+            break
+
+        case 'stop':
+        case 'die':
+            await stopMusic(message)
+            break
+
+        case 'queue':
+            getQueue(message)
+            break
+
     }
-});
+
+})
 
 
 // Logs in the bot with the token

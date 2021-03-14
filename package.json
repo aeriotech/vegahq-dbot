@@ -24,6 +24,9 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "opusscript": "0.0.8",
+    "ytdl-core": "^4.5.0",
+    "ytdl-core-discord": "^1.2.5"
   }
 }
