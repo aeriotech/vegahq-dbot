@@ -1,6 +1,8 @@
 ﻿# Discord bots with VegaHQ
 
-You can either follow this text guide, or follow along with the podcast episode we hosted about this topic [here](). It is however in Slovenian.
+### WARNING: Don't use this guide, as it is now no longer up to the current API
+
+You can either follow this text guide, or follow along with the podcast episode we hosted about this topic [here](https://www.youtube.com/watch?v=9XHc0NEV3QU). It is however in Slovenian.
 
 ## First steps
 
